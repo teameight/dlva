@@ -378,7 +378,11 @@ td[colspan]:not([colspan="1"]) {
 	display: block;
 }
 
-
+.infographic {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+}
 
 
 
