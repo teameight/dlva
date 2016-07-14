@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'KlinicSlabMediumIt';
+	src: url('KlinicSlabMediumIt.eot');
+	src: url('KlinicSlabMediumIt.woff') format('woff'), url('KlinicSlabMediumIt.ttf') format('truetype'), url('KlinicSlabMediumIt.svg') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+

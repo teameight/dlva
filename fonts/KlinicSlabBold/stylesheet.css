@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'KlinicSlabBold';
+	src: url('KlinicSlabBold.eot');
+	src: url('KlinicSlabBold.woff') format('woff'),
+	url('KlinicSlabBold.ttf') format('truetype'),
+	url('KlinicSlabBold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
