@@ -1,6 +1,12 @@
 jQuery(document).ready(function($){
 
-	console.log('jquery');
+	$.preloadImages = function() {
+  for (var i = 0; i < arguments.length; i++) {
+    $("<img />").attr("src", "/wp-content/themes/kidsplanet_child/infographics/" + arguments[i]);
+  }
+}
+
+$.preloadImages("15643-anim.gif", "3200-anim.gif", "4mil-anim.gif", "60percent-anim.gif");
 
     // $('.infographic').hover( function(){
 
