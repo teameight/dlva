@@ -4,4 +4,4 @@
  */
 
 wp_enqueue_script( 'jquery' );
-wp_enqueue_script( 'custom-js', 'main.js', array( 'jquery' ) );
+wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/main.js', array( 'jquery' ) );
