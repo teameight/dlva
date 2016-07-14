@@ -407,7 +407,18 @@ td[colspan]:not([colspan="1"]) {
       left: -25%;
   }
 }
-
+.scheme_original body .vc_gitem-post-data.vc_gitem-post-data-source-post_title {
+  margin-bottom: 0;
+}
+.vc_grid-container .vc_col-sm-4 h5 {
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    margin-top: 9px;
+    letter-spacing: .5px;
+}
 
 .scheme_original body figure figcaption, body .scheme_original .sc_image figcaption {
     
