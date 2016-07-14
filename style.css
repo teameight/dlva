@@ -484,6 +484,23 @@ td[colspan]:not([colspan="1"]) {
       width:66%;
   }
 }
+.footer_wrap_inner .dlva-btn {
+  margin-right:0;
+}
+.scheme_original .footer_wrap_inner .sc_socials {
+  margin-top: 4 0px;
+}
+
+.scheme_original .footer_wrap_inner .sc_socials.sc_socials_type_icons a {
+    border-color: #acb4b6;
+    background-color: #84BF51;
+    text-align: center;
+    border-radius: 50%;
+}
+.footer_wrap_inner .sc_socials.sc_socials_size_medium .social_icons span {
+    font-size: 1.5em;
+    color: white;
+}
 
 .copyright_wrap .copyright_text {
   font-size:14px;
