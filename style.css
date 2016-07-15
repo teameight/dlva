@@ -232,20 +232,6 @@ body .vc_row.vc_column-gap-30 {
   background-color: #84BF51 !important;
 }
 
-/* FOOTER */
-.scheme_original .footer_wrap_inner {
-    background-color: #626262 !important;
-}
-
-.scheme_original .copyright_wrap_inner {
-    background-color: #4A4A4A !important;
-}
-
-.copyright_style_menu .copyright_text,
-.copyright_style_socials .copyright_text {
-  float: none;
-  color: white !important;
-}
 /* TEXT */
 
 .page_content_wrap p, .page_content_wrap ul, .page_content_wrap ol, .page_content_wrap dl, .page_content_wrap blockquote, .page_content_wrap address {
@@ -519,28 +505,57 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 }
 
 
-/* footer
--------------------------------------------------------------- */
-
+/* FOOTER */
 .scheme_original body .footer_wrap_inner {
-  font-size: 18px;
+    background-color: #626262 !important;
+    font-size: 18px;
 }
-@media screen and (max-width: 600px) {
+
+.scheme_original .copyright_wrap_inner {
+    background-color: #4A4A4A !important;
+}
+
+.copyright_style_menu .copyright_text,
+.copyright_style_socials .copyright_text {
+  float: none;
+  color: white !important;
+}
+
+footer.widget_area .sc_list_style_iconed li {
+    margin-bottom: 12px !important;
+}
+
+@media screen and (max-width: 1150px) {
   .scheme_original body .widget_area_inner aside {
       text-align: center!important;
       width:100%!important;
   }
-  .scheme_original body .widget_area_inner aside+aside {
+  .scheme_original body .widget_area_inner aside#text-4 {
       padding-top: 20px!important;
   }
    .scheme_original body .widget_area_inner aside .textwidget a {
       margin-top: 12px!important;
   }
 }
-@media screen and (min-width: 600px) {
-  .scheme_original body .widget_area_inner aside+aside {
-      text-align: right;
-      width:66%;
+@media screen and (min-width: 750px) {
+  .scheme_original .footer_wrap_inner.widget_area_inner aside {
+      width:50% !important;
+      text-align: left!important;
+  }
+  .scheme_original body .widget_area_inner aside#text-4 {
+      width:100% !important;
+      text-align: center!important;
+      border-top: 1px solid #f4f7f9 !important;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .scheme_original .footer_wrap_inner.widget_area_inner aside {
+      width:30% !important;
+  }
+  .scheme_original .footer_wrap_inner.widget_area_inner aside#text-4 {
+      width:40% !important;
+      border-top: none !important;
+      text-align: right!important;
   }
 }
 .footer_wrap_inner .dlva-btn {
