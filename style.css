@@ -60,6 +60,11 @@ body {
 
 /* Contact form
 -------------------------------------------------------------- */
+body iframe {
+    height: 507px;
+    border-bottom: 8px solid #ccc;
+}
+
 #main_content {
 	font-family: 'Rokkitt', serif;
 	color:#4A4A4A;
@@ -237,6 +242,23 @@ td[colspan]:not([colspan="1"]) {
   float: none;
   color: white !important;
 }
+/* TEXT */
+
+.scheme_original p, .scheme_original ul, .scheme_original ol, .scheme_original dl, .scheme_original blockquote, .scheme_original address {
+    margin-bottom: .66667em;
+    line-height: 1.5555em;
+}
+.scheme_original ul, .scheme_original ol {
+  margin-bottom:1.6667em;
+}
+
+p + h1,
+p + h2,
+p + h3 {
+  margin-top: 12px;
+}
+
+
 
 /* CALLOUT */
 .dlva-callout {
