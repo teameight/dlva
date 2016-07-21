@@ -154,31 +154,56 @@ td[colspan]:not([colspan="1"]) {
 
 /* THEME CUSTOMIZATIONS */
 
+/* HEADER */
 
-.top_panel_wrap .top_panel_middle {
-    max-width: 1600px;
-    margin: 0 auto;
+@media (min-width: 699px) {
+  .top_panel_wrap, .top_panel_wrap .top_panel_middle {
+      max-width: 1600px;
+      margin: 0 auto;
+  }
+
+  .top_panel_wrap .top_panel_bottom {
+      max-width: 1600px;
+      margin: 0 auto;
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      z-index: 50;
+      background-color: transparent!important;
+  }
+  .top_panel_wrap .top_panel_bottom .content_wrap {
+      padding-left: 200px;
+      padding-right: 0;
+  }
+
+
+}
+.top_panel_wrap .logo {
+    padding: 1em 0 0;
 }
 
-.top_panel_wrap .top_panel_bottom {
-    max-width: 1600px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+@media (max-width: 479px) {
+  .top_panel_style_1 .logo {
+      width: 35%!important;
+  }
+}
+
+/* Home */
+
+.sc_image img {
+    max-width: none;
     width: 100%;
-    z-index: 50;
-    background-color: transparent!important;
 }
+
+/* LAYOUT */
 
 body .content_wrap {
     width: 100%;
     margin: 0 auto;
     max-width: 1600px;
-}
-.top_panel_wrap .top_panel_bottom .content_wrap {
-    padding-left: 200px;
+    padding: 0 15px;
     box-sizing: border-box;
 }
 
@@ -187,11 +212,7 @@ body .content_wrap {
   padding: 0 0 80px;
 }
 
-@media (max-width: 1440px) {
-  .content_wrap {
-/*    width: 90% !important;
-*/  }
-}
+
 @media (max-width: 1000px) {
   .dlva-callout-2col {
     padding-left: 2% !important;
@@ -200,8 +221,10 @@ body .content_wrap {
 }
 
 .vc_row {
-  margin-right: 0 !important;
-  margin-left: 0 !important;
+  margin-right: -15px !important;
+  margin-left: -15px !important;
+  padding-left: 30px;
+  padding-right:30px;
 }
 body .vc_row.vc_column-gap-30 {
   margin-right: -15px !important;
@@ -288,8 +311,16 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
   margin-top: .66667em;
 }
 
-
-
+.sc_toggles {
+  margin-top: 12px;
+  margin-bottom: 36px
+}
+.sc_toggles_icon.icon-plus {
+      z-index: 2;
+}
+.sc_active .sc_toggles_icon.icon-minus {
+      z-index: 3;
+}
 
 /* CALLOUT */
 .dlva-callout {
