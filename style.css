@@ -220,11 +220,14 @@ body .content_wrap {
   }
 }
 
-.vc_row {
+.post_content > .vc_row {
   margin-right: -15px !important;
   margin-left: -15px !important;
   padding-left: 30px;
   padding-right:30px;
+}
+.post_content > .vc_row.banner {
+  padding:0 !important;
 }
 body .vc_row.vc_column-gap-30 {
   margin-right: -15px !important;
@@ -232,6 +235,11 @@ body .vc_row.vc_column-gap-30 {
 }
 .scheme_original .scroll_to_top {
     border-radius: 50%;
+}
+
+.sidebar_show .page_content_wrap .content_wrap {
+    max-width: 1200px;
+    margin-top: 60px;
 }
 
 /* HEADER */
@@ -258,6 +266,13 @@ body .vc_row.vc_column-gap-30 {
 
 .scheme_original .menu_main_nav > li > a {
   border: 0;
+}
+
+.scheme_original body a {
+    color: #629F28;
+}
+.scheme_original body a:hover {
+    color: #356D00;
 }
 
 .menu_main_nav {
@@ -397,6 +412,7 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
   display: inline-block;
   line-height: 1;
   text-align: center;
+  border-radius: 10px;
 }
 
 .dlva-btn-primary {
@@ -406,8 +422,8 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 }
 
 .dlva-btn-primary:hover {
-  background-color: #AFD789;
-  border: 3px solid #AFD789;
+  background-color: #356D00;
+  border: 3px solid #356D00;
 }
 
 .dlva-btn-primary-lite {
@@ -416,19 +432,14 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
   border: 3px solid white;
 }
 
-.dlva-btn-primary-lite:hover {
-  background-color: #D8D8D8;
-  border: 3px solid #d8d8d8;
-}
-
 .dlva-btn-secondary {
-  color: #4A4A4A !important;
-  border: 3px solid #87718E;
+  color: #666 !important;
+  border: 3px solid #888;
 }
 
 .dlva-btn-secondary:hover {
-  color: #626262 !important;
-  border: 3px solid #626262;
+  color: #356D00 !important;
+  border: 3px solid #356D00;
 }
 
 .dlva-btn-secondary-lite {
@@ -437,9 +448,11 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
   border: 3px solid white !important;
 }
 
+.dlva-btn-primary-lite:hover,
 .dlva-btn-secondary-lite:hover {
-  color: #D8D8D8 !important;
-  border: 3px solid #D8D8D8 !important;
+    background-color: #84BF51;
+    border: 3px solid #ffffff;
+    color: white !important;
 }
 
 /* TOGGLES */
