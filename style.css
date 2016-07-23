@@ -179,9 +179,40 @@ td[colspan]:not([colspan="1"]) {
   }
 
 
+  .headbutts {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+  }
+  .top_panel_wrap .headbutts li {
+    float:right;
+    margin:0 0 0 1em;
+    text-align: right;
+  }
+
 }
 .top_panel_wrap .logo {
     padding: 1em 0 0;
+}
+.top_panel_wrap .contact_logo {
+    position: inherit!important;
+}
+.top_panel_wrap .headbutts li {
+    margin:0 auto;
+    text-align: center;
+}
+.top_panel_wrap .headbutts li a {
+    background-color: #84BF51;
+    color: white !important;
+    border: 3px solid #84BF51;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 12px 2em;
+    margin: 0;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    border-radius: 10px;
 }
 
 @media (max-width: 479px) {
