@@ -54,13 +54,28 @@ body {
 	font-family: 'Klinic';
 }
 
+@media (max-width: 479px) {
+  body {
+      font-size: 13px;
+  }
+}
+@media (max-width: 699px) and (min-width: 480px) {
+  body {
+      font-size: 14px;
+  }
+}
 
+@media (max-width: 799px) and (min-width: 700px) {
+  body {
+      font-size: 15px;
+  }
+}
 
 
 
 /* Contact form
 -------------------------------------------------------------- */
-body iframe {
+body .wpb_wrapper > iframe {
     height: 507px;
     border-bottom: 8px solid #ccc;
 }
@@ -106,6 +121,15 @@ body iframe {
     margin: 0 7px;
     display: inline-block;
     line-height: 1;
+    background-color: #84BF51;
+    color: white !important;
+    border: 3px solid #84BF51;
+    border-radius: 10px;
+}
+#main_content button:hover, #main_content input[type="button"]:hover, #main_content input[type="reset"]:hover, #main_content input[type="submit"]:hover {
+    color: #fff !important;
+    border: 3px solid #448C00;
+    background: #448C00;
 }
 #main_content #dl_check label {
 	display:block;
@@ -115,7 +139,14 @@ body iframe {
     background-color: white;
     color: #5C8CD2 !important;
     border: 3px solid white;
+  border-radius: 10px;
 }
+#main_content #dl_check input[type="submit"] :hover {
+    background-color: #84BF51;
+    border: 3px solid #ffffff;
+    color: white !important;
+}
+
 #main_content form {
     padding: 0 3% 60px;
 }
@@ -139,6 +170,7 @@ td[colspan]:not([colspan="1"]) {
 #main_content textarea {
 	background-color: #f2f3f4;
 	border: 2px solid #ccc;
+  border-radius: 5px!important;
 }
 #main_content input[type="text"]:focus, 
 #main_content input[type="number"]:focus, 
@@ -156,10 +188,16 @@ td[colspan]:not([colspan="1"]) {
 
 /* HEADER */
 
+
+.top_panel_wrap .logo {
+    padding: 1em 0 0;
+}
+
 @media (min-width: 699px) {
   .top_panel_wrap, .top_panel_wrap .top_panel_middle {
       max-width: 1600px;
       margin: 0 auto;
+      z-index: 10;
   }
 
   .top_panel_wrap .top_panel_bottom {
@@ -182,7 +220,7 @@ td[colspan]:not([colspan="1"]) {
   .headbutts {
     position: absolute;
     top: 30px;
-    right: 15px;
+    right: 33.333%;
   }
   .top_panel_wrap .headbutts li {
     float:right;
@@ -190,9 +228,17 @@ td[colspan]:not([colspan="1"]) {
     text-align: right;
   }
 
-}
-.top_panel_wrap .logo {
-    padding: 1em 0 0;
+  .column-3_5.top_search_panel {
+    width: 33.333%;
+    position: absolute;
+    right: 0;
+    top: 15px;
+  }
+  .top_panel_wrap .logo {
+    max-height: 175px;
+    overflow: visible !important;
+  }
+
 }
 .top_panel_wrap .contact_logo {
     position: inherit!important;
@@ -200,19 +246,6 @@ td[colspan]:not([colspan="1"]) {
 .top_panel_wrap .headbutts li {
     margin:0 auto;
     text-align: center;
-}
-.top_panel_wrap .headbutts li a {
-    background-color: #84BF51;
-    color: white !important;
-    border: 3px solid #84BF51;
-    font-size: 18px;
-    text-transform: uppercase;
-    padding: 12px 2em;
-    margin: 0;
-    display: inline-block;
-    line-height: 1;
-    text-align: center;
-    border-radius: 10px;
 }
 
 @media (max-width: 479px) {
@@ -303,7 +336,7 @@ body .vc_row.vc_column-gap-30 {
     color: #629F28;
 }
 .scheme_original body a:hover {
-    color: #356D00;
+    color: #448C00;
 }
 
 .menu_main_nav {
@@ -452,11 +485,6 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
   border: 3px solid #84BF51;
 }
 
-.dlva-btn-primary:hover {
-  background-color: #356D00;
-  border: 3px solid #356D00;
-}
-
 .dlva-btn-primary-lite {
   background-color: white;
   color: #5C8CD2 !important;
@@ -468,9 +496,26 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
   border: 3px solid #888;
 }
 
+.top_panel_wrap .headbutts li a {
+    background-color: #84BF51;
+    color: white !important;
+    border: 3px solid #84BF51;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 12px 2em;
+    margin: 0;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.top_panel_wrap .headbutts li a:hover,
+.dlva-btn-primary:hover,
 .dlva-btn-secondary:hover {
-  color: #356D00 !important;
-  border: 3px solid #356D00;
+    color: #fff !important;
+    border: 3px solid #448C00;
+    background: #448C00;
 }
 
 .dlva-btn-secondary-lite {
