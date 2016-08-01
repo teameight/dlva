@@ -770,5 +770,6 @@ footer.widget_area .sc_list_style_iconed li {
 }
 
 .copyright_wrap .copyright_text {
-  font-size:14px;
+  font-size:15px;
+  color: white !important;
 }
