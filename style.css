@@ -289,10 +289,24 @@ body .content_wrap {
     box-sizing: border-box;
 }
 
+@media (max-width: 699px) and (min-width: 480px) {
+  body .content_wrap{
+      width: 100% !important;
+  }
+  body .page_content_wrap {
+      padding-top: 0;
+  }
+}
+
 @media (min-width: 1100px) {
   .post_content > .vc_row {
       padding-left: 120px !important;
       padding-right: 120px !important;
+  }
+}
+@media (max-width: 699px) {
+  body .row:not(.columns_fluid) > [class*="column-"], body .columns_wrap:not(.columns_fluid) > [class*="column-"] {
+      width: 100%;
   }
 }
 
@@ -313,7 +327,6 @@ body .content_wrap {
   margin-left: -15px !important;
   padding-left: 30px;
   padding-right:30px;
-  margin-bottom:60px !important;
 }
 .post_content > .vc_row.banner {
   padding:0 !important;
@@ -428,6 +441,10 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 }
 .sc_active .sc_toggles_icon.icon-minus {
       z-index: 3;
+}
+
+.sc_image {
+    margin-bottom: 24px;
 }
 
 /* CALLOUT */
