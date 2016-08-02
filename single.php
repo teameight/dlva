@@ -5,14 +5,15 @@ Template Name: Single post
 get_header(); 
 
 
-if( is_singular('post') ){ ?>
-  <header class="header-blog"><div class="inner cf">
-    <h1><a href="<?php bloginfo('url') ?>/lifeline"><span>Lifeline</span></a></h1>
-    <p><span>Real stories about what is possible when you #SayYES.</span></p>
-  </div></header>
+if( is_singular('post') ){ 
+
+get_template_part( 'header', 'blog' ); 
+
+?>
 
 	<div id="primary" class="content-area inner single cf long-form-post">
 		<div id="content" class="site-content post-wrap" role="main">
+		<?php //echo themerex_get_custom_option('single_style'); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* The loop */ ?>

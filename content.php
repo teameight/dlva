@@ -3,8 +3,8 @@
  * The default template for displaying content. Used for both single and index/archive/search.
  *
  * @package WordPress
- * @subpackage Children_Theme
- * @since Children Theme 1.0
+ * @subpackage dvla_theme
+ * @since dvla theme 1.0
  */
 ?>
 
@@ -39,6 +39,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer-t8 cf">
+		<?php require(themerex_get_file_dir('templates/_parts/share.php')); ?>
 		<?php //t8_entry_meta(); ?>
 		<?php //echo do_shortcode('[ssba]'); ?>
 		<?php //get_template_part( 'author-bio' ); ?>
