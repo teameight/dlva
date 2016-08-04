@@ -11,7 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 
-		<?php if ( is_single() ) : ?>
+		<?php if ( is_single() ) : ?> 
 		<?php t8_featured_image();?>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php else : ?>
@@ -40,6 +40,7 @@
 
 	<footer class="entry-footer-t8 cf">
 		<?php require(themerex_get_file_dir('templates/_parts/share.php')); ?>
+		<a class="dlva-btn dvla-btn-small dlva-btn-secondary btn-subscribe" href="#">Subscribe to Lifeline</a>
 		<?php //t8_entry_meta(); ?>
 		<?php //echo do_shortcode('[ssba]'); ?>
 		<?php //get_template_part( 'author-bio' ); ?>
