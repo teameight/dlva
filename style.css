@@ -610,6 +610,13 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
     background: #448C00;
 }
 
+.scheme_original .top_panel_inner_style_1 .search_form_wrap {
+    background-color: #f2f3f4;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .scheme_original .sc_button.sc_button_style_filled {
     color: #fff !important;
     background: #84BF51;
