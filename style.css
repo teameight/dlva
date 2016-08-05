@@ -173,6 +173,17 @@ body .wpb_wrapper > iframe {
     padding: 4px .5em 20px 0;
 }
 
+#main_content #dl_check {
+  background: #5C8CD2 !important;
+}
+
+#main_content #dl_check .errors {
+  background: white;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+}
+
 #main_content .online_form td label {
   display: block;
   margin-top: 5px;
