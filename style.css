@@ -189,6 +189,10 @@ body .wpb_wrapper > iframe {
   margin-top: 5px;
 }
 
+label.required:after {
+  content: '' !important;
+}
+
 td[colspan]:not([colspan="1"]) {
     border-top: 1px solid #ccc;
     padding-top: 12px;
