@@ -166,11 +166,18 @@ body .wpb_wrapper > iframe {
     padding: 0 3% 60px;
 }
 
-#main_content #frontend-form td {
+#main_content #frontend-form td,
+#main_content .online_form td {
     vertical-align: middle;
     border: none;
     padding: 4px .5em 20px 0;
 }
+
+#main_content .online_form td label {
+  display: block;
+  margin-top: 5px;
+}
+
 td[colspan]:not([colspan="1"]) {
     border-top: 1px solid #ccc;
     padding-top: 12px;
