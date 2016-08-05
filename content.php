@@ -40,6 +40,7 @@
 
 	<footer class="entry-footer-t8 cf">
 		<?php require(themerex_get_file_dir('templates/_parts/share.php')); ?>
+		<a class="dlva-btn dvla-btn-small dlva-btn-primary" href="<?php echo esc_url( home_url( '/share-your-story/' ) ); ?>">Share your story</a>
 		<a class="dlva-btn dvla-btn-small dlva-btn-secondary btn-subscribe" href="#">Subscribe to Lifeline</a>
 		<?php //t8_entry_meta(); ?>
 		<?php //echo do_shortcode('[ssba]'); ?>
