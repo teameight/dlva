@@ -181,7 +181,7 @@ body .wpb_wrapper > iframe {
   background: white;
   display: block;
   margin: 10px 0;
-  padding: 10px;
+  padding: 0 10px;
 }
 
 #main_content .online_form td label {
