@@ -871,6 +871,10 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
   float:left;
 }
 
+.soliloquy-container {
+  overflow: hidden;
+}
+
 /* FOOTER */
 .scheme_original body .footer_wrap_inner {
     background-color: #626262 !important;
