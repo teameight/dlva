@@ -250,20 +250,12 @@ body .sc_twitter.sc_slider_swiper:hover .sc_slider_controls_wrap .sc_slider_next
       background-color: transparent!important;
   }
   .top_panel_wrap .top_panel_bottom .content_wrap {
-      padding-left: 200px;
+      padding-left: 240px;
       padding-right: 0;
   }
 
-
-  .headbutts {
-    position: absolute;
-    top: 30px;
-    right: 33.333%;
-  }
   .top_panel_wrap .headbutts li {
-    float:right;
     margin:0 0 0 1em;
-    text-align: right;
   }
 
   .column-3_5.top_search_panel {
@@ -273,7 +265,7 @@ body .sc_twitter.sc_slider_swiper:hover .sc_slider_controls_wrap .sc_slider_next
     top: 15px;
   }
   .top_panel_wrap .logo {
-    max-height: 175px;
+    max-height: 210px;
     overflow: visible !important;
   }
 
@@ -282,8 +274,7 @@ body .sc_twitter.sc_slider_swiper:hover .sc_slider_controls_wrap .sc_slider_next
     position: inherit!important;
 }
 .top_panel_wrap .headbutts li {
-    margin:0 auto;
-    text-align: center;
+    display: inline;
 }
 
 @media (max-width: 479px) {
@@ -596,22 +587,22 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
     line-height: 18px;
 }
 
-.top_panel_wrap .headbutts li a {
-    background-color: #84BF51;
-    color: white !important;
-    border: 3px solid #84BF51;
-    font-size: 18px;
-    text-transform: uppercase;
+.top_panel_wrap .headbutts li.dlva-btn {
+    font-size: 16px;
     padding: 12px 2em;
-    margin: 0;
-    display: inline-block;
-    line-height: 1;
-    text-align: center;
-    border-radius: 10px;
+}
+.headbutts .menu {
+  text-align: right;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.top_panel_wrap .headbutts li.dlva-btn a {
+    color: white !important;
 }
 
 
-.top_panel_wrap .headbutts li a:hover,
+.top_panel_wrap .headbutts li.dlva-btn-primary:hover,
 .dlva-btn-primary:hover,
 .dlva-btn-secondary:hover {
     color: #fff !important;
@@ -686,7 +677,7 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 
 
 .top_panel_wrap .logo_main {
-	max-height: 200px;
+	max-height: 240px;
 }
 
 
@@ -872,7 +863,7 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 }
 
 .soliloquy-container {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 /* FOOTER */
