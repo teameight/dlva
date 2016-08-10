@@ -55,7 +55,7 @@ body {
 }
 
 @media (max-width: 699px) {
-  body {
+  body, .single-tribe_events #tribe-events-content .tribe-events-venue-details, .single-tribe_events #tribe-events-content .tribe-events-abbr, .single-tribe_events #tribe-events-content .updated {
       font-size: 16px !important;
   }
 }
@@ -841,9 +841,8 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 
 .type-post h1.entry-title {
   color: #5C8CD2;
-  font-size: 52px;
-  line-height: 60px;
 }
+
 .type-post .entry-thumb {
   margin-bottom:24px;
 }
@@ -851,6 +850,10 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 @media screen and (min-width: 750px) {
   .type-post {
     width:58.333%;
+  }
+  .type-post h1.entry-title {
+    font-size: 52px;
+    line-height: 60px;
   }
 }
 
