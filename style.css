@@ -248,7 +248,7 @@ body .sc_twitter.sc_slider_swiper:hover .sc_slider_controls_wrap .sc_slider_next
     padding: 1em 0 0;
 }
 
-@media (min-width: 699px) {
+@media (min-width: 700px) {
   .top_panel_wrap, .top_panel_wrap .top_panel_middle {
       max-width: 1600px;
       margin: 0 auto;
@@ -276,7 +276,7 @@ body .sc_twitter.sc_slider_swiper:hover .sc_slider_controls_wrap .sc_slider_next
   }
 
   .column-3_5.top_search_panel {
-    width: 33.333%;
+    width: 100%;
     position: absolute;
     right: 0;
     top: 15px;
@@ -292,6 +292,13 @@ body .sc_twitter.sc_slider_swiper:hover .sc_slider_controls_wrap .sc_slider_next
 }
 .top_panel_wrap .headbutts li {
     display: inline;
+}
+
+@media (max-width: 699px) {
+  .menu_relayout .top_panel_style_1 .search_wrap,
+  .menu_relayout .top_panel_style_2 .search_wrap {
+    margin: 1em auto !important;
+  }
 }
 
 @media (max-width: 479px) {
@@ -345,6 +352,13 @@ body .content_wrap {
       padding-right: 120px !important;
   }
 }
+
+@media (min-width: 750px) {
+  .post_content > .vc_row {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 @media (max-width: 699px) {
   body .row:not(.columns_fluid) > [class*="column-"], body .columns_wrap:not(.columns_fluid) > [class*="column-"] {
       width: 100%;
@@ -366,8 +380,8 @@ body .content_wrap {
 .post_content > .vc_row {
   margin-right: -15px !important;
   margin-left: -15px !important;
-  padding-left: 30px;
-  padding-right:30px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .post_content > .vc_row.banner {
   padding:0 !important;
@@ -525,18 +539,18 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 .dlva-callout p {
   color: white;
   max-width: 800px;
-  padding: 0 20px;
-  font-size: 18px;
+  padding: 0;
+  font-size: 1.5em;
 }
 .dlva-callout h2, .dlva-callout h3, .dlva-callout h4 {
   color: white!important;
   max-width: 800px;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .dlva-callout.dlva-callout-1col p {
-  font-size: 28px;
-  line-height: 40px;
+  font-size: 1.25em;
+  line-height: 1.5;
   text-align: center;
   margin: 0 auto 40px;
 }
@@ -578,8 +592,11 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
   text-align: center;
   border-radius: 10px;
 }
-.dlva-btn + .dlva-btn { 
-  margin-left: 1em;
+
+@media screen and (min-width: 475px) {
+  .dlva-btn + .dlva-btn {
+    margin-left: 1em;
+  }
 }
 .dlva-btn-primary {
   background-color: #84BF51;
@@ -600,18 +617,30 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 .dlva-btn.dvla-btn-small {
     font-size: 18px;
     padding: 12px 1.5em 10px;
-    margin: 0 1.5em;
     line-height: 18px;
+}
+
+@media screen and (min-width: 700px) {
+  .dlva-btn.dvla-btn-small {
+    margin: 0 1.5em;
+  }
 }
 
 .top_panel_wrap .headbutts li.dlva-btn {
     font-size: 16px;
     padding: 12px 2em;
 }
+
 .headbutts .menu {
-  text-align: right;
-  margin-top: 12px;
-  margin-bottom: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 700px) {
+  .headbutts .menu {
+    text-align: right;
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
 }
 
 .top_panel_wrap .headbutts li.dlva-btn a {
