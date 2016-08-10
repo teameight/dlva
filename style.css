@@ -54,12 +54,7 @@ body {
 	font-family: 'Klinic';
 }
 
-@media (max-width: 479px) {
-  body {
-      font-size: 15px !important;
-  }
-}
-@media (max-width: 699px) and (min-width: 480px) {
+@media (max-width: 699px) {
   body {
       font-size: 16px !important;
   }
@@ -668,6 +663,15 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
     display: block;
   }
 
+}
+/* EVENTS */
+
+.events-single article {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.events-single .sc_button.sc_button_style_filled {
+  float:none !important;
 }
 
 /* TOGGLES */
