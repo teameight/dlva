@@ -671,7 +671,15 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
     margin: 0 auto;
 }
 .events-single .sc_button.sc_button_style_filled {
-  float:none !important;
+  float:none !important; 
+}
+
+.tribe-events-single-event-description + .tribe-events-single-event-description {
+    display: none;
+}
+.scheme_original .single-tribe_events #tribe-events-content .tribe-events-schedule, .scheme_original .tribe-events-loop .tribe-events-event-meta {
+    color: #5C8CD2;
+    font-size:18px !important;
 }
 
 /* TOGGLES */
