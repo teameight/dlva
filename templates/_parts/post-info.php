@@ -4,7 +4,7 @@
 
 			$info_parts = array_merge(array(
 				'snippets' => false,	// For singular post/page/course/team etc.
-				'date' => true,
+				'date' => false,
 				'author' => true,
 				'terms' => false,
 				'counters' => true,

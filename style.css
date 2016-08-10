@@ -54,13 +54,8 @@ body {
 	font-family: 'Klinic';
 }
 
-@media (max-width: 479px) {
-  body {
-      font-size: 15px !important;
-  }
-}
-@media (max-width: 699px) and (min-width: 480px) {
-  body {
+@media (max-width: 699px) {
+  body, .single-tribe_events #tribe-events-content .tribe-events-venue-details, .single-tribe_events #tribe-events-content .tribe-events-abbr, .single-tribe_events #tribe-events-content .updated {
       font-size: 16px !important;
   }
 }
@@ -684,6 +679,23 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
   }
 
 }
+/* EVENTS */
+
+.events-single article {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.events-single .sc_button.sc_button_style_filled {
+  float:none !important; 
+}
+
+.tribe-events-single-event-description + .tribe-events-single-event-description {
+    display: none;
+}
+.scheme_original .single-tribe_events #tribe-events-content .tribe-events-schedule, .scheme_original .tribe-events-loop .tribe-events-event-meta {
+    color: #5C8CD2;
+    font-size:18px !important;
+}
 
 /* TOGGLES */
 .scheme_original .sc_toggles.sc_toggles_style_1 .sc_toggles_item .sc_toggles_title .sc_toggles_icon {
@@ -852,9 +864,8 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 
 .type-post h1.entry-title {
   color: #5C8CD2;
-  font-size: 52px;
-  line-height: 60px;
 }
+
 .type-post .entry-thumb {
   margin-bottom:24px;
 }
@@ -862,6 +873,10 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 @media screen and (min-width: 750px) {
   .type-post {
     width:58.333%;
+  }
+  .type-post h1.entry-title {
+    font-size: 52px;
+    line-height: 60px;
   }
 }
 
