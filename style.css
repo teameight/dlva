@@ -129,7 +129,7 @@ body .wpb_wrapper > iframe {
 }
 
 
-#main_content button, #main_content input[type="button"], #main_content input[type="reset"] {
+#main_content button, #main_content input[type="button"], #main_content input[type="reset"], #main_content input[type="submit"] {
     font-size: 20px;
     text-transform: uppercase;
     padding: 17px 45px;
@@ -308,6 +308,16 @@ body .sc_twitter.sc_slider_swiper:hover .sc_slider_controls_wrap .sc_slider_next
   .menu_relayout .top_panel_style_1 .search_wrap,
   .menu_relayout .top_panel_style_2 .search_wrap {
     margin: 1em auto !important;
+  }
+}
+
+.search_wrap {
+  width: 100% !important;
+}
+
+@media (min-width: 700px) {
+  .search_wrap {
+    width: 20.6em !important;
   }
 }
 
