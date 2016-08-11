@@ -111,7 +111,7 @@ body .wpb_wrapper > iframe {
 #main_content #dl_check {
     box-shadow: none;
     border: none;
-    padding: 60px;
+    padding: 10%;
     width: 100%;
     margin: 0 auto 20px;
     box-sizing: border-box;
@@ -119,12 +119,17 @@ body .wpb_wrapper > iframe {
     color: white;
 }
 
+#main_content #dl_num_check {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
 #main_content input[type="checkbox"], #main_content input[type="radio"] {
     margin-right: .5em;
 }
 
 
-#main_content button, #main_content input[type="button"], #main_content input[type="reset"], #main_content input[type="submit"] {
+#main_content button, #main_content input[type="button"], #main_content input[type="reset"] {
     font-size: 20px;
     text-transform: uppercase;
     padding: 17px 45px;
@@ -136,6 +141,11 @@ body .wpb_wrapper > iframe {
     border: 3px solid #84BF51;
     border-radius: 10px !important;
 }
+
+#main_content input[type="submit"] {
+  margin: 0;
+}
+
 #main_content button:hover, #main_content input[type="button"]:hover, #main_content input[type="reset"]:hover, #main_content input[type="submit"]:hover {
     color: #fff !important;
     border: 3px solid #448C00;
