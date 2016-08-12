@@ -260,13 +260,13 @@ body .sc_twitter.sc_slider_swiper:hover .sc_slider_controls_wrap .sc_slider_next
 
 @media (min-width: 700px) {
   .top_panel_wrap, .top_panel_wrap .top_panel_middle {
-      max-width: 1600px;
+      max-width: 2000px;
       margin: 0 auto;
       z-index: 10;
   }
 
   .top_panel_wrap .top_panel_bottom {
-      max-width: 1600px;
+      max-width: 2000px;
       margin: 0 auto;
       box-sizing: border-box;
       position: absolute;
@@ -352,7 +352,7 @@ body .sc_twitter.sc_slider_swiper:hover .sc_slider_controls_wrap .sc_slider_next
 body .content_wrap {
     width: 100%;
     margin: 0 auto;
-    max-width: 1600px;
+    max-width: 2000px;
     padding: 0 15px;
     box-sizing: border-box;
 }
@@ -561,6 +561,10 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
   max-width: 800px;
   padding: 0;
   font-size: 1.5em;
+}
+
+.dlva-callout > * {
+  max-width: 620px;
 }
 .dlva-callout h2, .dlva-callout h3, .dlva-callout h4 {
   color: white!important;
