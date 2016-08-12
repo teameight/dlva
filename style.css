@@ -563,7 +563,11 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
   font-size: 1.5em;
 }
 
-.dlva-callout > * {
+.dlva-callout p, 
+.dlva-callout h1, 
+.dlva-callout h3, 
+.dlva-callout h4, 
+.dlva-callout h5 {
   max-width: 620px;
 }
 .dlva-callout h2, .dlva-callout h3, .dlva-callout h4 {
