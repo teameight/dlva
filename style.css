@@ -356,6 +356,11 @@ body .content_wrap {
     padding: 0 15px;
     box-sizing: border-box;
 }
+@media (min-width: 480px) {
+  .row, .columns_wrap {
+      margin-right: 0px !important;
+  }
+}
 
 @media (max-width: 699px) and (min-width: 480px) {
   body .content_wrap{
