@@ -956,6 +956,16 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 .entry-footer-t8 {
   margin-top:24px;
 }
+
+@media (max-width: 1240px) {
+  .entry-footer-t8 > * {
+    display: block;
+    width: 80%;
+    float: none !important;
+    margin: 10px auto !important;
+    text-align: center;
+  }
+}
 .entry-footer-t8 .sc_socials.sc_socials_share .share_caption {
   font-weight:bold;
   text-transform: uppercase;
