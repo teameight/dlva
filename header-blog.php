@@ -15,5 +15,5 @@
   	<?php else : ?>
 	    <h1><a href="<?php bloginfo('url') ?>/lifeline"><span>Lifeline</span></a></h1>
   	<?php endif; ?>
-    <p><span>Real stories about what is possible when you #SayYES.</span></p>
+    <p><span>Real stories about what is possible when you #SayYES.</span> <a href="http://eepurl.com/cbrEf1" class="subscribelink">subscribe &raquo;</a></p>
   </div></header>

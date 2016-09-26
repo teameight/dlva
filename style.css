@@ -911,9 +911,33 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 .scheme_original .header-blog h1 a:hover {
   color: white;
 }
-.scheme_original .header-blog p {
-  margin-top: 0;
+
+  .header-blog .subscribelink {
+      font-style: italic;
+      color: white;
+      display:block;
+  }
+
+@media screen and (min-width: 800px) {
+
+  .scheme_original .header-blog .inner {
+      max-width: 750px;
+      margin: 16px auto 0;
+      text-align: left;
+  }
+  .scheme_original .header-blog p {
+    margin-top: -0.35em;
+    font-size: 20px;
+    border-top: 2px solid white;
+    padding-top: 15px;
+  }
+  .header-blog .subscribelink {
+      float: right;
+      display: inline-block;
+  }
+
 }
+
 
 .type-post {
   max-width:750px;
@@ -930,6 +954,14 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
 
 .type-post .entry-thumb {
   margin-bottom:24px;
+}
+
+@media screen and (max-width: 500px) {
+
+  img {
+    width:100%;
+  }
+
 }
 
 @media screen and (min-width: 750px) {
