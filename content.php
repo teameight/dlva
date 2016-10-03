@@ -1,52 +1,57 @@
 <?php
 /**
- * The default template for displaying content. Used for both single and index/archive/search.
- *
- * @package WordPress
- * @subpackage dvla_theme
- * @since dvla theme 1.0
- */
+* The default template for displaying content. Used for both single and index/archive/search.
+*
+* @package WordPress
+* @subpackage dvla_theme
+* @since dvla theme 1.0
+*/
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+    <header class="entry-header">
 
-		<?php if ( is_single() ) : ?> 
-		<?php t8_featured_image();?>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-		<?php else : ?>
-		<h1 class="entry-title">
-			<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-		</h1>
-		<?php endif; // is_single() ?>
+        <?php if ( is_single() ) : ?> 
+        <?php t8_featured_image();?>
+        <h1 class="entry-title"><?php the_title(); ?></h1>
+        <?php else : ?>
+        <h1 class="entry-title">
+            <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+        </h1>
+        <?php endif; // is_single() ?>
 
-		<div class="entry-meta">
-			<?php
-				if(in_category("on-the-road") ) { the_author(); echo " | "; }
+        <div class="entry-meta">
+            <?php
+                if(in_category("on-the-road") ) { the_author(); echo " | "; }
 
-				$date = sprintf( '<span><time class="entry-date" datetime="%1$s"> %2$s</time></span>',
-				      esc_attr( get_the_date( 'c' ) ),
-				      esc_html( get_the_date() )
-				    );
-				echo $date;
-			?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+                $date = sprintf( '<span><time class="entry-date" datetime="%1$s"> %2$s</time></span>',
+                      esc_attr( get_the_date( 'c' ) ),
+                      esc_html( get_the_date() )
+                    );
+                echo $date;
+            ?>
+        </div><!-- .entry-meta -->
+    </header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'dvla_theme' ) ); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'dvla_theme' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
-	</div><!-- .entry-content -->
+    <div class="entry-content">
+        <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'dvla_theme' ) ); ?>
+        <?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'dvla_theme' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+    </div><!-- .entry-content -->
 
-	<footer class="entry-footer-t8 cf">
-		<?php require(themerex_get_file_dir('templates/_parts/share.php')); ?>
-		<a class="dlva-btn dvla-btn-small dlva-btn-primary" href="<?php echo esc_url( home_url( '/share-your-story/' ) ); ?>">Share your story</a>
-		<a class="dlva-btn dvla-btn-small dlva-btn-secondary btn-subscribe" href="#">Subscribe to Lifeline</a>
-		<?php //t8_entry_meta(); ?>
-		<?php //echo do_shortcode('[ssba]'); ?>
-		<?php //get_template_part( 'author-bio' ); ?>
-		<!-- <div class="nl-signup"> -->
-		<!-- BEGIN: Constant Contact Email List Form Button -->
-		<!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>subscribe/" class="button small full grey" >Subscribe to Lifeline</a></div> -->
-	</footer>
+    <footer class="entry-footer-t8 cf">
+        <?php require(themerex_get_file_dir('templates/_parts/share.php')); ?>
+        <a class="dlva-btn dvla-btn-small dlva-btn-primary" href="<?php echo esc_url( home_url( '/share-your-story/' ) ); ?>">Share your story</a>
+        <a class="dlva-btn dvla-btn-small dlva-btn-secondary btn-subscribe" href="http://eepurl.com/cbrEf1">Subscribe to Lifeline</a>
+        <?php //t8_entry_meta(); ?>
+        <?php //echo do_shortcode('[ssba]'); ?>
+        <?php //get_template_part( 'author-bio' ); ?>
+        <!-- <div class="nl-signup"> -->
+        <!-- BEGIN: Constant Contact Email List Form Button -->
+        <!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>subscribe/" class="button small full grey" >Subscribe to Lifeline</a></div> -->
+    </footer>
 </article><!-- #post -->
+
+<div class="related-stories">
+<h4 class="section-title-divider">Related Stories</h4>
+<?php echo do_shortcode( '[t8-recent-posts count="3"]' ); ?>
+</div>

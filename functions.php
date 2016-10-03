@@ -137,44 +137,43 @@ function t8_recent_posts($atts){
   );
 
 if($author != '') $args['author_name'] = $author;
-  if($category != '') $args['category_name'] = $category;
+if($category != '') $args['category_name'] = $category;
 
-     if($style == "text") $return_string .= '<ul class="link-list">';
+if($style == "text") $return_string .= '<ul class="link-list">';
 
-  $query1 = new WP_Query( $args );
+$query1 = new WP_Query( $args );
 
-  while ( $query1->have_posts() ) {
-     $query1->the_post();
-
-
-     if($style == "text"):
-
-           $return_string .= '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
-
-       else:
-
-        $return_string .= '<div class="post-item">';
-
-        if ( has_post_thumbnail() ) {
-           $pid = get_the_ID();
-           $pthumb = get_the_post_thumbnail($pid, 'large');
-           $return_string .= '<div class="post-img"><a class="content" href="'.get_permalink().'">'.$pthumb.'</a></div>';
-        }
-        $return_string .= '<a class="post-details" href="'.get_permalink().'"><h4>'.get_the_title().'</h4><h5 style="text-align: right;">read the story&nbsp;»</h5></a>';
-        $return_string .= '</div>';
-
-       endif;
+while ( $query1->have_posts() ) {
+$query1->the_post();
 
 
-   } //endwhile
+if($style == "text"):
 
-     if($style == "text") $return_string .= '</ul>';
+     $return_string .= '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
 
+ else:
+
+  $return_string .= '<div class="post-item">';
+
+  if ( has_post_thumbnail() ) {
+     $pid = get_the_ID();
+     $pthumb = get_the_post_thumbnail($pid, 'large');
+     $return_string .= '<div class="post-img"><a class="content" href="'.get_permalink().'">'.$pthumb.'</a></div>';
+  }
+  $return_string .= '<a class="post-details" href="'.get_permalink().'"><h4>'.get_the_title().'</h4><h5 style="text-align: right;">read the story&nbsp;»</h5></a>';
   $return_string .= '</div>';
 
-  wp_reset_postdata();
-  return $return_string;
+ endif;
+
+
+} //endwhile
+
+if($style == "text") $return_string .= '</ul>';
+
+$return_string .= '</div>';
+
+wp_reset_postdata();
+return $return_string;
 
 }
 add_shortcode( 't8-recent-posts', 't8_recent_posts' );
-endif;
