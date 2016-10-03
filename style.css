@@ -51,7 +51,7 @@
 
 
 body {
-	font-family: 'Klinic';
+	font-family: 'Klinic' !important;
 }
 
 @media (max-width: 699px) {
