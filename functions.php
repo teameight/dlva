@@ -41,7 +41,7 @@ if ( ! function_exists( 't8_entry_meta' ) ) :
     //
     // Categories.
     //
-    
+
 	$categories        = get_the_category();
 	$separator         = ', ';
 	$categories_output = '';
@@ -61,8 +61,6 @@ if ( ! function_exists( 't8_entry_meta' ) ) :
 	$categories_list = sprintf( '<span>%s</span>',
 		trim( $categories_output, $separator )
 	);
-    
-
 
 	$readmore = '';
 
@@ -91,7 +89,7 @@ if ( ! function_exists( 't8_featured_image' ) ) :
 		$vid_url = get_field("featured_video", get_the_ID());
 		//echo $vid_url;
 		echo '<div class="video-container">'.wp_oembed_get( $vid_url, array('width'=>525) ).'</div>';
-    
+
     } elseif ( has_post_thumbnail() ) {
 
       if ( $cropped == 'cropped' ) {
@@ -116,4 +114,64 @@ if ( ! function_exists( 't8_featured_image' ) ) :
     }
 
   }
+endif;
+
+function t8_recent_posts($atts){
+   extract(shortcode_atts(array(
+      'count' => 2,
+      'category' => false,
+      'type' => 'post',
+      'style' => 'thumbs',
+      'author' => '',
+   ), $atts));
+
+   $return_string = '<div class="recent-posts cf">';
+   $args = array(
+         'orderby' => 'date',
+         'order' => 'DESC' ,
+         'post_type' => $type,
+         'posts_per_page' => $count,
+         'post__not_in' => array(get_the_ID())
+   );
+   if($author != '') $args['author_name'] = $author;
+   if($category != '') $args['category_name'] = $category;
+
+      if($style == "text") $return_string .= '<ul class="link-list">';
+
+   $query1 = new WP_Query( $args );
+
+   while ( $query1->have_posts() ) {
+      $query1->the_post();
+
+
+      if($style == "text"):
+
+            $return_string .= '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
+
+        else:
+
+         $return_string .= '<div class="post-item">';
+
+         if ( has_post_thumbnail() ) {
+            $pid = get_the_ID();
+            $pthumb = get_the_post_thumbnail($pid, 'large');
+            $return_string .= '<div class="post-img"><a class="content" href="'.get_permalink().'">'.$pthumb.'</a></div>';
+         }
+         $return_string .= '<a class="post-details" href="'.get_permalink().'"><h4>'.get_the_title().'</h4><h5 style="text-align: right;">read the story&nbsp;»</h5></a>';
+         $return_string .= '</div>';
+
+        endif;
+
+
+    } //endwhile
+
+      if($style == "text") $return_string .= '</ul>';
+
+   $return_string .= '</div>';
+
+   wp_reset_postdata();
+   return $return_string;
+
+}
+add_shortcode( 't8-recent-posts', 't8_recent_posts' );
 endif;
