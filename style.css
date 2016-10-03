@@ -1089,3 +1089,75 @@ footer.widget_area .sc_list_style_iconed li {
   font-size:15px;
   color: white !important;
 }
+.related-stories {
+ max-width: 1300px;
+ margin: 140px auto 0;
+}
+
+.recent-posts {
+ max-width: 1300px;
+ display: flex;
+ justify-content: space-between;
+ align-items: stretch;
+ flex-direction: column;
+}
+
+@media screen and (min-width: 818px) {
+ .recent-posts {
+   flex-direction: row;
+ }
+}
+
+.recent-posts .post-item {
+ background-color: transparent;
+ margin-bottom: 32px;
+ position: relative;
+}
+
+@media screen and (min-width: 818px) {
+
+ .recent-posts .post-item {
+   box-sizing: border-box;
+   flex: 1;
+   margin-right: 32px;
+ }
+}
+
+.recent-posts .post-item:last-of-type {
+ margin-right: 0;
+}
+
+.recent-posts .post-item .post-img {
+ border: none;
+}
+
+.recent-posts .post-item:hover .post-details {
+}
+
+.recent-posts .post-item .post-details {
+ display: block;
+ padding: 10px;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ background-color: rgba(132,191,81,.9);
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ color: white;
+}
+
+.recent-posts .post-item .post-details h4 {
+ color: white;
+ font-size: 20px;
+}
+.recent-posts .post-item .post-details h5 {
+ color: white;
+ font-size: 16px;
+}
+
+
+.scroll-wrapper {
+ -webkit-overflow-scrolling: touch;
+   overflow-y: scroll;
+}
