@@ -156,9 +156,9 @@ if($style == "text"):
   $return_string .= '<div class="post-item">';
 
   if ( has_post_thumbnail() ) {
-     $pid = get_the_ID();
-     $pthumb = get_the_post_thumbnail($pid, 'large');
-     $return_string .= '<div class="post-img"><a class="content" href="'.get_permalink().'">'.$pthumb.'</a></div>';
+     $pid = get_post_thumbnail_id( get_the_ID() );
+     $pthumb = wp_get_attachment_image_src($pid, 'large', true);
+     $return_string .= '<div class="post-img" style="background-image: url('.$pthumb[0].') !important;"><a class="content" href="'.get_permalink().'"></a></div>';
   }
   $return_string .= '<a class="post-details" href="'.get_permalink().'"><h4>'.get_the_title().'</h4><h5 style="text-align: right;">read the story&nbsp;»</h5></a>';
   $return_string .= '</div>';

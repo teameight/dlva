@@ -1095,11 +1095,16 @@ footer.widget_area .sc_list_style_iconed li {
 }
 
 .recent-posts {
- max-width: 1300px;
+ max-width: none;
  display: flex;
  justify-content: space-between;
  align-items: stretch;
  flex-direction: column;
+ margin-top: 30px;
+}
+
+.related-stories .recent-posts {
+  max-width: 1300px;
 }
 
 @media screen and (min-width: 818px) {
@@ -1125,10 +1130,29 @@ footer.widget_area .sc_list_style_iconed li {
 
 .recent-posts .post-item:last-of-type {
  margin-right: 0;
+ margin-bottom: 32px;
+}
+
+.recent-posts .post-img:before {
+  content: "";
+  height: 0;
+  padding-top: 75%;
+  display: block;
 }
 
 .recent-posts .post-item .post-img {
  border: none;
+ position: relative;
+ background-size: cover;
+ background-position: 50% 50%;
+}
+
+.recent-posts .post-item .post-img a {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .recent-posts .post-item:hover .post-details {
