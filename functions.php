@@ -119,13 +119,24 @@ if ( ! function_exists( 't8_featured_image' ) ) :
 endif;
 
 function t8_recent_posts($atts){
-  extract(shortcode_atts(array(
+  $vars = shortcode_atts(array(
      'count' => 2,
      'category' => false,
      'type' => 'post',
      'style' => 'thumbs',
      'author' => '',
-  ), $atts));
+     'posts' => '',
+  ), $atts);
+
+  $count = $vars['count'];
+  $type = $vars['type'];
+  $author = $vars['author'];
+  $category = $vars['category'];
+  $style = $vars['style'];
+  $posts = $vars['posts'];
+  if ( $posts ) {
+    $posts = explode(',', $posts);
+  }
 
   $return_string = '<div class="recent-posts cf">';
   $args = array(
@@ -133,8 +144,12 @@ function t8_recent_posts($atts){
         'order' => 'DESC' ,
         'post_type' => $type,
         'posts_per_page' => $count,
-        'post__not_in' => array(get_the_ID())
+        'post__not_in' => array(get_the_ID()),
   );
+
+  if ( $posts ) {
+    $args['post__in'] = $posts;
+  }
 
 if($author != '') $args['author_name'] = $author;
 if($category != '') $args['category_name'] = $category;
