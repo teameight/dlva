@@ -835,18 +835,27 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
     letter-spacing: .5px;
 }
 
+.scheme_original body figure.sc_image a {
+  max-height: calc(100vh - 300px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
 .scheme_original body figure figcaption, body .scheme_original .sc_image figcaption {
     
     background-color: transparent!important;
-    font-size: 18px;
+    font-size: 24px;
     bottom:0;
-    padding:0 15% .5em;
+    padding:5% 10% .5em;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.4) 35%);
 }
 
 @media screen and (min-width: 500px) {
 
   .scheme_original body figure figcaption, .scheme_original body .sc_image figcaption {
-      font-size: 24px;
+      font-size: 28px;
+      padding:5% 15% .5em;
       
   }
 }
@@ -865,7 +874,7 @@ h1 + ul, h2 + ul, h3 + ul, h4 + ul {
   .scheme_original body figure figcaption, .scheme_original body .sc_image figcaption {
 
       font-size: 50px;
-      max-width: 60%;
+      padding-left: 39%;
       
   }
 
